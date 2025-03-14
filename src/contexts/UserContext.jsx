@@ -1,6 +1,5 @@
 import { createContext, useState } from 'react';
 
-
 const UserContext = createContext();
 
 const getUserFromToken = () => {
@@ -13,7 +12,7 @@ const getUserFromToken = () => {
 
 function UserProvider({ children }) {
   const [user, setUser] = useState(getUserFromToken());
-  const value = { user, setUser }
+  const value = { user, setUser };
   
   return (
     <UserContext.Provider value={value}>
@@ -23,4 +22,3 @@ function UserProvider({ children }) {
 };
 
 export { UserProvider, UserContext };
-

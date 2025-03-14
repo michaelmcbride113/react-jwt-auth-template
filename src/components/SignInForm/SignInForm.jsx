@@ -2,7 +2,6 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router';
 
 import { signIn } from '../../services/authServices';
-
 import { UserContext } from '../../contexts/UserContext';
 
 const SignInForm = () => {
@@ -69,4 +68,3 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
-
