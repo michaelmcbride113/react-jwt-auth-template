@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router';
 
 import { signUp } from '../../services/authServices';
 
+import { UserContext } from '../../contexts/UserContext';
+
 const SignUpForm = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
   const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     username: '',
@@ -23,7 +26,7 @@ const SignUpForm = () => {
     evt.preventDefault();
     try {
       const newUser = await signUp(formData);
-      console.log(newUser); //TODO remove debug logging
+      setUser(newUser)
     } catch (err) {
       setMessage(err.message);
     }
