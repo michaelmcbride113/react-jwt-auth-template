@@ -12,13 +12,12 @@ const index = async () => {
       throw new Error(data.err);
     }
 
-    return data
+    return data;
   } catch (err) {
     console.log(err);
     throw new Error(err);
   }
 };
-
 
 export {
   index,
