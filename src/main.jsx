@@ -6,10 +6,10 @@ import App from './App.jsx'
 
 // Wrap the App component with the BrowserRouter component to enable
 // enable route handling throughout your application.
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
 )
